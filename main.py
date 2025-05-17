@@ -12,7 +12,7 @@ st.markdown("""
     label, .css-1fv8s86, .css-1aumxhk, .css-1nw4l3l {  /* классы для label и input */
         color: #ffffff !important;
     }
-    /* Кнопки с чёрным текстом на белом фоне */
+    /* Кнопки с черным текстом на белом фоне */
     button {
         color: #000000 !important;
         background-color: #ffffff !important;
