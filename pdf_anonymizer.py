@@ -1,5 +1,5 @@
 import os
-import fitz  # PyMuPDF
+import fitz
 import re
 
 def anonymize_pdf(pdf_file):
