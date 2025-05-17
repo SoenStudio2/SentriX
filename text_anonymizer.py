@@ -1,7 +1,6 @@
 import re
 
 STOP_WORDS = {'Город', 'Страна', 'Улица', 'Дом', 'Проспект', 'Пер', 'Переулок', 'Площадь', 'Шоссе', 'Ул', 'Г'}
-COMMON_WORDS = {'ученик', 'ученица', 'ученика', 'класса', 'заслуги', 'заслуга', 'отличник'}
 
 def replace_fio(match):
     words = match.groups()
@@ -9,9 +8,6 @@ def replace_fio(match):
     words = [w for w in words if w]
 
     if any(len(w) < 3 or any(ch.isdigit() for ch in w) for w in words):
-        return match.group()
-
-    if any(w.lower() in COMMON_WORDS for w in words):
         return match.group()
 
     if words[0] in STOP_WORDS:
